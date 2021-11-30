@@ -49,3 +49,41 @@ def change_z():
 
 change_z()
 print(z)
+
+
+# Iterate Through a List of Dictionaries
+
+# Create a function iterate_cictionary(some_list) that, given a list of dictionaries, the function loops through each dictionary in the list and prints each key and the associated value. For example, given the following list:
+
+students = [
+        {'first_name':  'Michael', 'last_name' : 'Jordan'},
+        {'first_name' : 'John', 'last_name' : 'Rosales'},
+        {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+        {'first_name' : 'Jake', 'last_name' : 'Smith', 'middle_name': 'Jack'},
+        {'first_name' : 'KB', 'last_name' : 'Tonel'}
+]
+
+def iterate_dictionary(students):
+    for student in students:
+            print(f"first_name - {student['first_name']}, last_name - {student['last_name']}")
+
+iterate_dictionary(students)
+
+#ALTERNATIVELY:
+
+def iterate_dictionary(students):
+    for x in range(len(students)):
+        row = ""
+        for key,value in students[x].items():
+            row += f"{key} - {value}"
+        print(row)
+
+iterate_dictionary(students)
+
+
+# should output: (it's okay if each key-value pair ends up on 2 separate lines;
+# bonus to get them to appear exactly as below!)
+# first_name - Michael, last_name - Jordan
+# first_name - John, last_name - Rosales
+# first_name - Mark, last_name - Guillen
+# first_name - KB, last_name - Tonel
